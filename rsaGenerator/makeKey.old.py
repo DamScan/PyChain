@@ -8,7 +8,7 @@ key = RSA.generate(2048)
 encrypted_key = key.export_key(passphrase=passPhrase, pkcs=8, protection="scryptAndAES128-CBC")
 
 if not os.path.exists(f"./{path}"):
-    os.mkdir(os.path.join("./", path))
+    os.mkdir(os.path.join("../", path))
 file_out = open(f"{path}/{name}.pem", "wb")
 file_out.write(encrypted_key)
 file_out.close()
