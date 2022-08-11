@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     transaction = wallet.createTransaction(receiver, amount, type)
 
-    if pool.transactionExists(transaction) == False:
+    if not pool.transactionExists(transaction):
         pool.addTransaction(transaction)
 
     blockchain = Blockchain()
